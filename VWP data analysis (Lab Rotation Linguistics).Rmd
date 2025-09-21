@@ -6,10 +6,8 @@ output: html_document
 ---
 
 ```{r setup wd, include=FALSE} 
-setwd("~/Documents/RPTU/WS 24:25/LB_Linguistics/Lab_modality_data_2024")
+setwd("~Lab_modality_data")
 
-
-# rmarkdown::render("VWP data analysis (Lab Rotation Linguistics).Rmd", output_format = "html_document")
 ```
 
 
@@ -40,7 +38,7 @@ library(lmerTest)
 
 
 ```{r load data}
-vwp = read.csv("vwp_recheck_data.csv")
+vwp = read.csv("vwp_data.csv")
 vwp$Accuracy = ifelse(vwp$IMAGE_CLICKED == "TARGET", 1, 0)
 prop.table(table(vwp$Accuracy))
 
